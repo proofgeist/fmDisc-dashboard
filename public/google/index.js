@@ -1,11 +1,30 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 import "regenerator-runtime/runtime.js";
+// import { configureData } from "./data-utilities";
+google.charts.load("current", { packages: ["corechart"] });
+google.charts.setOnLoadCallback(drawChart);
 
+const array = [
+  ["Task", "Hours per Day"],
+  ["Work", 11],
+  ["Eat", 2],
+  ["Commute", 2],
+  ["Sleep", 2],
+  ["Play", 7],
+];
+const keys = ["Status", "Count"];
+const d = configureData(array, keys);
+console.log(d);
+function drawChart() {
+  var data = google.visualization.arrayToDataTable(array);
+  var options = {
+    title: "My Daily Activities",
+    pieHole: 0.4,
+  };
 
-const setText = () => {
-  document.getElementById("text").innerHTML =
-    "We are beginning! Oh Yes, we are!";
-};
-
-document.getElementById("click").addEventListener("click", setText);
+  var chart = new google.visualization.PieChart(
+    document.getElementById("chart")
+  );
+  chart.draw(data, options);
+}

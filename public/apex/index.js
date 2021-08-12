@@ -1,11 +1,29 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 import "regenerator-runtime/runtime.js";
+import ApexCharts from "apexcharts";
+import {
+  configureData as dataXY,
+  configureLabels as labelsXY,
+  parseData as parseXY,
+} from "./dataUtilities/xyPlotCharts";
 
+var data = [];
 
-const setText = () => {
-  document.getElementById("text").innerHTML =
-    "We are beginning! Oh Yes, we are!";
+var options = {
+  chart: {
+    type: "line",
+  },
+  series: [
+    {
+      name: "sales",
+      data: [30, 40, 35, 50, 49, 60, 70, 91, 125],
+    },
+  ],
+  xaxis: {
+    categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999],
+  },
 };
 
-document.getElementById("click").addEventListener("click", setText);
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+chart.render();
