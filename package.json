@@ -14,7 +14,9 @@
   "author": "jeremy.brown@proofgeist.com",
   "license": "ISC",
   "dependencies": {
+    "apexcharts": "^3.27.3",
     "bootstrap": "^5.0.2",
+    "dc": "^4.2.7",
     "fm-webviewer-fetch": "^1.1.0",
     "regenerator-runtime": "^0.13.9"
   },
