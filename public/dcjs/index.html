@@ -5,10 +5,28 @@
     <title>JSDev</title>
   </head>
   <body>
-    <h1>Let's Begin</h1>
-    <div class="row">
-      <div class="col"><button id="click">Click Me</button></div>
-      <div class="col-11"><p id="text"></p></div>
+    <div class="container">
+      <div class="row m-3">
+        <div class="col">
+          <div class="card rounded">
+            <div class="card-header">By Year</div>
+
+            <div class="card-body">
+              <div id="matricYearBar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row m-3">
+        <div class="col">
+          <div class="card rounded">
+            <div class="card-header">Status</div>
+            <div class="card-body">
+              <div class="p-3" id="statusBarChart"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="index.js"></script>

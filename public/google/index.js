@@ -1,7 +1,5 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 import "regenerator-runtime/runtime.js";
-// import { configureData } from "./data-utilities";
 google.charts.load("current", { packages: ["corechart"] });
 google.charts.setOnLoadCallback(drawChart);
 
@@ -13,9 +11,8 @@ const array = [
   ["Sleep", 2],
   ["Play", 7],
 ];
-const keys = ["Status", "Count"];
-const d = configureData(array, keys);
-console.log(d);
+const keys = ["Status", "Sum"];
+
 function drawChart() {
   var data = google.visualization.arrayToDataTable(array);
   var options = {

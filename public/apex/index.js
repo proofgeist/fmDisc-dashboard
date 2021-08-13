@@ -11,13 +11,14 @@ import {
 var data = [];
 
 var options = {
+  title: { text: "dfg" },
   chart: {
-    type: "line",
+    type: "bar",
   },
   series: [
     {
       name: "sales",
-      data: [30, 40, 35, 50, 49, 60, 70, 91, 125],
+      data: [35, 40, 35, 50, 49, 60, 70, 91, 125],
     },
   ],
   xaxis: {
